@@ -27,7 +27,7 @@ class JobClassifier:
     def function(self, title: str):
         """Loops through keyword, function pairs"""
         return next(
-            (v for keyword, v in self.keyword_to_function.item()
+            (v for keyword, v in self.keyword_to_function.items()
              if keyword in title), None)
 
     def department(self, title: str):
@@ -46,7 +46,7 @@ class JobClassifier:
             self.clean_title)
 
         # extract features
-        df['Seniority'] = df['Cleaned title'].apply(self.seniority)
+        df['Seniority'] = df['Cleaned Title'].apply(self.seniority)
         df['Function'] = df['Cleaned Title'].apply(self.function)
         df['Department'] = df['Cleaned Title'].apply(self.department)
 
