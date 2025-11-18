@@ -175,17 +175,18 @@ department_keywords = {
 }
 
 
-seniority_keywords = [
-    "intern", "trainee", "junior", "assistant", "apprentice", "associate",
-    "graduate", "entry-level", "entry level", "staff", "specialist",
-    "coordinator", "technician", "consultant", "professional",
-    "senior", "lead", "principal", "sr", "experienced", "expert", "advisor",
-    "mentor", "manager", "supervisor", "team lead", "foreman", "head of",
-    "head", "controller", "director", "managing", "executive", "vp",
-    "vice president", "deputy director", "associate director", "chief",
-    "ceo", "coo", "cfo", "cto", "cmo", "cio", "chro", "president",
-    "founder", "cofounder", "owner", "partner", "chairman", "chairwoman",
-    "chairperson", "board member", "non executive director", "leader",
-    "leadership", "directorate", "fellow", "principal investigator",
-    "senior manager", "lead consultant", "principal engineer"
-]
+seniority_keywords = {
+    "senior": ["senior"],
+
+    "entry": ["entry"],
+
+    "owner": ["owner"],
+
+    "manager": ["manager"],
+
+    "director": ["director"],
+
+    "vp": ["vp"],
+
+    "c-suite": ["ceo", "cfo", "cmo", "cto", "coo"]
+}

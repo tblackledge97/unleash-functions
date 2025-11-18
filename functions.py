@@ -19,10 +19,10 @@ class JobClassifier:
     def seniority(self, title: str):
         """Loops through seniority keywords
         uses next to return the first match found"""
-        return next(
-            (keyword for keyword in self.seniority_keywords
-             if keyword in title),
-            None)
+        for sen, keywords in self.seniority_keywords.items():
+            if any(keyword in title for keyword in keywords):
+                return sen
+        return None
 
     def function(self, title: str):
         """Loops through keyword, function pairs"""
